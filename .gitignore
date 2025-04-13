@@ -1,0 +1,25 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+venv/
+
+# Environment variables
+.env
+
+# Instance folder (if used for dev-specific stuff)
+instance/
+
+# SQLite database
+*.db
+
+# Flask Migrations
+migrations/
+
+# VSCode settings (optional)
+.vscode/
+
+# Logs
+*.log
