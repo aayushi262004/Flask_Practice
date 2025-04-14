@@ -1,16 +1,33 @@
-import React, { useState } from 'react';
-import ReactDOM from 'react-dom/client'; // ✅ use this for React 18+
-// Optional if you have styles
+import 'bootstrap/dist/css/bootstrap.min.css';
+import React from 'react';
+import ReactDOM from 'react-dom/client'; // <-- using the correct 'client' import
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route
+} from 'react-router-dom';
+
+import NavBar from './components/Navbar';
+import CreateRecipePage from './components/CreateRecipe';
+import LoginPage from './components/Login';
+import SignUpPage from './components/SignUp';
+import HomePage from './components/Home';
 
 const App = () => {
-  const [message] = useState('Hello from React!');
   return (
-    <div className="app">
-      {message}
-    </div>
+    <Router>
+      <div className="container">
+        <NavBar />
+        <Routes>
+          <Route path="/create_recipe" element={<CreateRecipePage />} />
+          <Route path="/login" element={<LoginPage />} />
+          <Route path="/signup" element={<SignUpPage />} />
+          <Route path="/" element={<HomePage />} />
+        </Routes>
+      </div>
+    </Router>
   );
 };
 
-// ✅ Create root and render
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(<App />);
