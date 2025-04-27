@@ -1,4 +1,5 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './styles/main.css'
 import React from 'react';
 import ReactDOM from 'react-dom/client'; // <-- using the correct 'client' import
 import {
@@ -16,7 +17,7 @@ import HomePage from './components/Home';
 const App = () => {
   return (
     <Router>
-      <div className="container">
+      <div className="">
         <NavBar />
         <Routes>
           <Route path="/create_recipe" element={<CreateRecipePage />} />

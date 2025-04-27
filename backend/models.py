@@ -1,4 +1,4 @@
-from exts import db
+from backend.exts import db
 
 class Recipe(db.Model):
     id = db.Column(db.Integer, primary_key=True)

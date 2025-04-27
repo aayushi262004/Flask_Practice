@@ -1,7 +1,7 @@
 import unittest
-from main import create_app
-from config import TestConfig
-from exts import db
+from backend.main import create_app
+from backend.config import TestConfig
+from backend.exts import db
 
 
 class APITestCase(unittest.TestCase):

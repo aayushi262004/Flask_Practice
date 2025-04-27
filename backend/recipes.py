@@ -1,7 +1,7 @@
 from flask_restx import Namespace, Resource, fields
 from flask import request,abort
-from models import Recipe  # make sure this is where Recipe is defined
-from exts import db  # assuming db is initialized here
+from backend.models import Recipe  # make sure this is where Recipe is defined
+from backend.exts import db  # assuming db is initialized here
 from flask_jwt_extended import jwt_required
 
 
